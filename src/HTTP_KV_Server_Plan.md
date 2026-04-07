@@ -1,6 +1,6 @@
 # HTTP Server + KV Store — Complete Implementation Plan
 > **Stack:** C++17 | epoll | Thread Pool | LRU Cache | WAL | REST API  
-> **Goal:** FAANG-ready resume project for SDE 1/2 roles  
+> **Goal:** A nice Project  
 > **Timeline:** 6 weeks
 
 ---
