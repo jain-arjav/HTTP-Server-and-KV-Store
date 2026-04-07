@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C++",
+            "type": "shell",
+            "command": "mkdir -p ${workspaceFolder}/build && g++ -std=c++17 -Wall -g -I ${workspaceFolder}/src -o ${workspaceFolder}/build/main ${workspaceFolder}/src/main.cpp 2>&1 | tee ${workspaceFolder}/build/build.log",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compile src/main.cpp (log → build/build.log)"
+        },
+        {
+            "label": "Build and Run C++",
+            "type": "shell",
+            "command": "mkdir -p ${workspaceFolder}/build && g++ -std=c++17 -Wall -g -I ${workspaceFolder}/src -o ${workspaceFolder}/build/main ${workspaceFolder}/src/main.cpp 2>&1 | tee ${workspaceFolder}/build/build.log && ${workspaceFolder}/build/main",
+            "group": "test",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compile and run src/main.cpp (log → build/build.log)"
+        }
+    ]
+}
